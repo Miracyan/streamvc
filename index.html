@@ -12,21 +12,24 @@
 </head>
 
 <body>
-  <h2><strong>Low-latency streaming any-to-many voice conversion based on non-autoregressive model</strong></h2>
+  <h1><strong>Streaming non-autoregressive model for any-to-many voice conversion</strong></h1>
   <h3>Authors: </h3>
-  <p>Ziyi Chen, Haoran Miao, Pengyuan Zhang</p>
+  <p><i>Ziyi Chen, Haoran Miao, Pengyuan Zhang</i></p>
   <h3>Address: </h3>
-  <p>Key Laboratory of Speech Acoustics & Content Understanding, Institute of Acoustics, Chinese Academy of Sciences, China</p>
-  <p>University of Chinese Academy of Sciences, Beijing, China</p>
+  <p><i>Key Laboratory of Speech Acoustics & Content Understanding, Institute of Acoustics, Chinese Academy of Sciences, China</i></p>
+  <p><i>University of Chinese Academy of Sciences, Beijing, China</i></p>
   <h3>Email: </h3>
-  <p>chenziyi@hccl.ioa.ac.cn</p>
+  <p><i>chenziyi@hccl.ioa.ac.cn</i></p>
   <p>&nbsp;</p>
   <hr size="5px" noshade=true />
-  
-  <p>&nbsp;</p>
-
-  <h3> <i>Conversion results of proposed method :</i> </h3>
-
+  <h2> <i>Vocoder evaluations </i> </h2>
+  <hr>
+  <h4>  <font color="red">RawCat</font> means MB HiFi-GAN generates speech by 40ms chunk without overlap and concatenating them directly. </h4>
+  <h4>  <font color="red">MBC4S1</font> means MB HiFi-GAN generates speech by 40ms chunk with 10ms overlap of hanning window smoothness. </h4>
+  <h4>  <font color="red">MBC4S2</font> means MB HiFi-GAN generates speech by 40ms chunk with 20ms overlap of hanning window smoothness. </h4>
+  <h4>  <font color="red">MBS HiFi-GAN</font> means proposed streaming vocoder.  </h4>
+  <hr>
+  <h4> <i> Results of different vocoders are shown below. </i> </h4>
   <table border="1">
     <tr>
       <td width="120px">&nbsp;
@@ -98,20 +101,6 @@
     </tr>
     <tr>
       <td>
-        <div align="center"> MBC4S4 <i>sd</i></div>
-      </td>
-      <td width="149"><audio src="wavs/vocoder/mbc4s4/MM_000008_to_MM.wav" controls="controls">
-          Your browser does not support the audio tag.
-        </audio></td>
-      <td width="149"><audio src="wavs/vocoder/mbc4s4/MM_000009_to_MM.wav" controls="controls">
-          Your browser does not support the audio tag.
-        </audio></td>
-      <td width="149"><audio src="wavs/vocoder/mbc4s4/MM_000010_to_MM.wav" controls="controls">
-          Your browser does not support the audio tag.
-        </audio></td>
-    </tr>
-    <tr>
-      <td>
         <div align="center"> MBS HiFi-GAN </div>
       </td>
       <td width="149"><audio src="wavs/vocoder/mbs/MM_000008_to_MM.wav" controls="controls">
@@ -125,14 +114,18 @@
         </audio></td>
     </tr>
   </table>
-
+  <p>&nbsp;</p>
   <hr size="5px" noshade=true />
-  <h3> Audio examples of the target speaker. <font color="blue">Baker</font> represents audios in the databaker open
-    source mandarin dataset. <font color="blue">MM</font> represents audios of the male speaker in M2VoC Dev set and
-    <font color="blue">MF</font> represents audios
-    of the female speaker in M2VoC Dev set.</h3>
+  <h2> <i>Voice conversion evaluations </i> </h2>
+  <hr>
+  <h4> Audio examples of the target speaker: </h4>
+  <h4> <font color="blue">Baker</font> represents audios in the databaker open source mandarin dataset. </h4>
+  <h4> <font color="blue">MM</font> represents audios of the male speaker in M2VoC Dev set. </h4>
+  <h4> <font color="blue">MF</font> represents audios of the female speaker in M2VoC Dev set. </h4>
 
   <hr>
+
+  <h3><i>Conversion results of proposed methods: </i></h3>
 
   <h4> Target Speaker <font color="blue">MM</font> : </h4>
 
@@ -522,7 +515,6 @@
 
   <p>&nbsp;</p>
   <hr>
-  <p>&nbsp;</p>
 
   <h3> <i>Comparisons of different methods :</i> </h3>
   <h4> Target Speaker <font color="blue">MM</font> : </h4>
